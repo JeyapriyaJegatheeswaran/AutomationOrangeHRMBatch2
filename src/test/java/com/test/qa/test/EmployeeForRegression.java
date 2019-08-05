@@ -10,7 +10,7 @@ public class EmployeeForRegression extends TestBase {
 
 
 
-    @Test(priority = 3)
+    @Test(groups  ="REGRESSION",priority = 3)
     public void addEmployeeWithoutName() {
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertTrue(HomePage.isHomePageDisplayed(), "Home Page is not Displayed");
@@ -26,7 +26,7 @@ public class EmployeeForRegression extends TestBase {
         softAssert.assertEquals(EmployeePage.getNameValid(),"Please input employeeName!", "Employee Page is not Displayed");
         softAssert.assertAll();
     }
-    @Test(priority = 4)
+    @Test(groups  ="REGRESSION",priority = 4)
     public void addEmployeeWithoutFname() {
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertTrue(HomePage.isHomePageDisplayed(), "Home Page is not Displayed");
@@ -42,7 +42,7 @@ public class EmployeeForRegression extends TestBase {
         softAssert.assertEquals(EmployeePage.getFnameValid(),"Please input employeeFirstName!", "Employee Page is not Displayed");
         softAssert.assertAll();
     }
-    @Test(priority = 5)
+    @Test(groups  ="REGRESSION",priority = 5)
     public void addEmployeeWithoutDesignation() {
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertTrue(HomePage.isHomePageDisplayed(), "Home Page is not Displayed");
@@ -58,7 +58,7 @@ public class EmployeeForRegression extends TestBase {
         softAssert.assertEquals(EmployeePage.getDesignationValid(),"Please select designation!", "Employee Page is not Displayed");
         softAssert.assertAll();
     }
-    @Test(priority = 6)
+    @Test(groups  ="REGRESSION",priority = 6)
     public void addEmployeeWithoutEmail() {
         SoftAssert softAssert = new SoftAssert();
         softAssert.assertTrue(HomePage.isHomePageDisplayed(), "Home Page is not Displayed");
