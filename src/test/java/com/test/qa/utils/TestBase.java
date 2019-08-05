@@ -17,7 +17,7 @@ import com.test.qa.pageobjects.utils.PageBase;
  * TestBase.java - class to verify TestBase Page functions
  * Created by SrirankanK on 10/3/2018.
  */
-public class TestBase {
+public class TestBase extends PageBase{
 	public SoftAssert softAssert;
 	
 	private static final Logger LOGGER = Logger.getLogger(TestBase.class);
