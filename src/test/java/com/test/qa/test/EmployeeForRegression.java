@@ -8,7 +8,22 @@ import org.testng.asserts.SoftAssert;
 
 public class EmployeeForRegression extends TestBase {
 
-
+    @Test(groups  ="REGRESSION",priority = 2)
+    public void addEmployeeWithoutId() {
+        SoftAssert softAssert = new SoftAssert();
+        softAssert.assertTrue(HomePage.isHomePageDisplayed(), "Home Page is not Displayed");
+        HomePage.clickCompanyMenu();
+        EmployeePage.clickEmployee();
+        softAssert.assertTrue(EmployeePage.isEmployeePageDisplayed(), "Employee Page is not Displayed");
+        EmployeePage.clickAddEmployee();
+        EmployeePage.setEmployeeName("bffnfnk");
+        EmployeePage.setEmployeeFirstName("vjnfvnev");
+        EmployeePage.setDesignation();
+        EmployeePage.setEmail("jnne@nef.com");
+        EmployeePage.clickSaveBtn();
+        softAssert.assertEquals(EmployeePage.getIdValid(),"Please input employeeId!", "Employee Page is not Displayed");
+        softAssert.assertAll();
+    }
 
     @Test(groups  ="REGRESSION",priority = 3)
     public void addEmployeeWithoutName() {
